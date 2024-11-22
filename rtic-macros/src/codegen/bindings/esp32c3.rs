@@ -207,7 +207,7 @@ mod esp32c3 {
         stmts
     }
 
-    pub fn async_prio_limit(app: &App, analysis: &CodegenAnalysis) -> Vec<TokenStream2> {
+    pub fn async_prio_limit(_app: &App, analysis: &CodegenAnalysis) -> Vec<TokenStream2> {
         let max = if let Some(max) = analysis.max_async_prio {
             quote!(#max)
         } else {
